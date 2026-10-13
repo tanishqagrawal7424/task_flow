@@ -27,15 +27,18 @@
       <p class="app-subtitle">Basic Todo Layout</p>
     </header>
 
-    <!-- Basic Task Input (No Add button, no Enter button) -->
+    <!-- Add a Task Feature (No Complete or Delete buttons) -->
     <div class="input-card">
-      <input 
-        type="text" 
-        id="task-input" 
-        class="task-input" 
-        placeholder="Type a task here..." 
-        autocomplete="off"
-      />
+      <div class="input-group">
+        <input 
+          type="text" 
+          id="task-input" 
+          class="task-input" 
+          placeholder="Add a new task..." 
+          autocomplete="off"
+        />
+        <button type="button" id="add-btn" class="add-btn">Add</button>
+      </div>
     </div>
 
     <!-- Task List (Basic layout without Add, Complete or Delete buttons) -->
