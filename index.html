@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo App — Basic Layout</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- Ambient background glow -->
   <div class="ambient-glow glow-1" aria-hidden="true"></div>
@@ -18,25 +22,20 @@
     <!-- Header -->
     <header class="app-header">
       <div class="header-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round">
           <polyline points="9 11 12 14 22 4"></polyline>
           <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
         </svg>
       </div>
       <h1 class="app-title">Todo <span class="gradient-text">App</span></h1>
-      <p class="app-subtitle">Basic Todo Layout</p>
+      <p class="app-subtitle">Todo App </p>
     </header>
 
     <!-- Add a Task Feature (No Complete or Delete buttons) -->
     <div class="input-card">
       <div class="input-group">
-        <input 
-          type="text" 
-          id="task-input" 
-          class="task-input" 
-          placeholder="Add a new task..." 
-          autocomplete="off"
-        />
+        <input type="text" id="task-input" class="task-input" placeholder="Add a new task..." autocomplete="off" />
         <button type="button" id="add-btn" class="add-btn">Add</button>
       </div>
     </div>
@@ -86,4 +85,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
