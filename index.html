@@ -41,7 +41,7 @@
       </div>
     </div>
 
-    <!-- Task List (Basic layout without Add, Complete or Delete buttons) -->
+    <!-- Task List (Supports Complete a task; No Delete buttons) -->
     <main class="list-card">
       <div class="list-header">
         <span class="list-label">Task List</span>
@@ -49,19 +49,35 @@
 
       <ul class="task-list" id="task-list">
         <li class="task-item">
-          <span class="task-bullet"></span>
+          <button type="button" class="check-btn" aria-label="Toggle task complete">
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </button>
           <span class="task-text">Design website wireframe and layout</span>
         </li>
         <li class="task-item">
-          <span class="task-bullet"></span>
+          <button type="button" class="check-btn" aria-label="Toggle task complete">
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </button>
           <span class="task-text">Review project requirements</span>
         </li>
         <li class="task-item">
-          <span class="task-bullet"></span>
+          <button type="button" class="check-btn" aria-label="Toggle task complete">
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </button>
           <span class="task-text">Prepare presentation slides</span>
         </li>
         <li class="task-item">
-          <span class="task-bullet"></span>
+          <button type="button" class="check-btn" aria-label="Toggle task complete">
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </button>
           <span class="task-text">Organize team meeting notes</span>
         </li>
       </ul>
