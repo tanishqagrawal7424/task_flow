@@ -1,0 +1,248 @@
+/* ==========================================================================
+   Todo App — Basic Layout Design System
+   ========================================================================== */
+
+:root {
+  --bg-base: #0b0f19;
+  --bg-card: rgba(18, 24, 38, 0.72);
+  --bg-input: rgba(13, 18, 30, 0.85);
+  
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(99, 102, 241, 0.55);
+  --border-hover: rgba(255, 255, 255, 0.15);
+
+  --text-main: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --accent-color: #6366f1;
+  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+  --accent-glow: rgba(99, 102, 241, 0.35);
+
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --shadow-card: 0 16px 36px -8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(99, 102, 241, 0.08);
+  --shadow-input-focus: 0 0 0 3px rgba(99, 102, 241, 0.2), 0 8px 24px -4px rgba(99, 102, 241, 0.25);
+
+  --radius-md: 14px;
+  --radius-lg: 20px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 1.25rem;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ambient Background Glow */
+.ambient-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+}
+
+.glow-1 {
+  top: -120px;
+  right: 15%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, #6366f1, transparent 70%);
+}
+
+.glow-2 {
+  bottom: 10%;
+  left: 10%;
+  width: 460px;
+  height: 460px;
+  background: radial-gradient(circle, #a855f7, transparent 70%);
+  opacity: 0.25;
+}
+
+/* Main Container */
+.app-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 8px 24px var(--accent-glow);
+  margin-bottom: 0.4rem;
+}
+
+.header-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.app-title {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.gradient-text {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app-subtitle {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+/* Basic Input Card (Clean, no buttons) */
+.input-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+  padding: 0.6rem;
+  box-shadow: var(--shadow-card);
+  transition: all 0.25s ease;
+}
+
+.input-card:focus-within {
+  border-color: var(--border-focus);
+  box-shadow: var(--shadow-input-focus);
+}
+
+.task-input {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 1.05rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  color: var(--text-main);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.task-input::placeholder {
+  color: var(--text-muted);
+}
+
+.task-input:focus {
+  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(18, 24, 38, 0.95);
+}
+
+/* List Card */
+.list-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.6rem;
+  box-shadow: var(--shadow-card);
+}
+
+.list-header {
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.list-label {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+/* Task List Items (Pure layout: no delete, complete, or add buttons) */
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: rgba(26, 35, 54, 0.6);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.task-item:hover {
+  border-color: var(--border-hover);
+  background: rgba(30, 41, 64, 0.8);
+  transform: translateY(-1px);
+}
+
+.task-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: 0 0 8px var(--accent-glow);
+  flex-shrink: 0;
+}
+
+.task-text {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  body {
+    padding: 2.5rem 1rem;
+  }
+}
